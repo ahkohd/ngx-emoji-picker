@@ -1,0 +1,17 @@
+{
+  "name": "ngx-emoji-picker",
+  "author": {
+    "name": "Victor Aremu",
+    "email": "victor.olorunbunmi@gmail.com",
+    "url": "https://github.com/ahkohd/ngx-emoji-picker"
+  },
+  "version": "0.0.1",
+  "description": "A simple emoji picker for Angular 2+ / Ionic 3 with AOT build support",
+  "keywords": ["emoji", "picker", "angular", "angular2", "angular7", "ionic3", "ionic", "ngx", "dropdown", "aot"],
+  "homepage": "https://github.com/ahkohd/ngx-emoji-picker",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^7.1.0",
+    "@angular/core": "^7.1.0"
+  }
+}
