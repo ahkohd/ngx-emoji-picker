@@ -1,5 +1,5 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { EmojiButtonComponent } from './components/emoji-button.component';
 import { EmojiCategoriesComponent } from './components/emoji-categories.component';
@@ -32,7 +32,7 @@ import { EmojiPickerComponent } from './components/emoji-picker.component';
     EmojiEmptyCategoryPipe
   ],
   imports: [
-    BrowserModule
+    CommonModule
   ],
   exports: [
     EmojiPickerApiDirective,
