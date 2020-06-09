@@ -5,7 +5,7 @@
     "email": "victor.olorunbunmi@gmail.com",
     "url": "https://github.com/ahkohd/ngx-emoji-picker"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple emoji picker for Angular 2+ / Ionic 3 with AOT build support",
   "keywords": [
     "emoji",
