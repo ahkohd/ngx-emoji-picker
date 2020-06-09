@@ -1,11 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
+{{message}}
 <div style="text-align:center">
 
-  <i
-  (click)="toggled = !toggled"
-  [(emojiPickerIf)]="toggled"
-  [emojiPickerDirection]="'bottom' || 'top' || 'left' || 'right'"
-  (emojiPickerSelect)="handleSelection($event)">😄</i>
+  <button (click)="toggled = !toggled" [(emojiPickerIf)]="toggled"
+    [emojiPickerDirection]="'bottom' || 'top' || 'left' || 'right'"
+    (emojiPickerSelect)="handleSelection($event)">😄</button>
 
 </div>
-

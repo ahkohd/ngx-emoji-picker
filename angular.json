@@ -146,13 +146,13 @@
           "options": {
             "tsConfig": "projects/ngx-emoji-picker/tsconfig.lib.json",
             "project": "projects/ngx-emoji-picker/ng-package.json"
-          }
-        ,          "configurations": {
+          },
+          "configurations": {
             "production": {
               "tsConfig": "projects/ngx-emoji-picker/tsconfig.lib.prod.json"
             }
           }
-},
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -176,5 +176,8 @@
       }
     }
   },
-  "defaultProject": "ngx-emoji-picker"
+  "defaultProject": "ngx-emoji-picker",
+  "cli": {
+    "analytics": "b8c12113-e22f-40b8-8447-17ed27592e12"
+  }
 }
