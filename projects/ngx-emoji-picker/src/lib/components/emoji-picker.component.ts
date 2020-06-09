@@ -1,27 +1,31 @@
-import { Component, EventEmitter, Output, ElementRef, Renderer } from '@angular/core';
-import { DIRECTIONS } from '../misc/picker-directions';
-import { Subject } from 'rxjs';
-import { takeUntil, debounceTime} from 'rxjs/operators';
-
-
-
+import {
+  Component,
+  EventEmitter,
+  Output,
+  ElementRef,
+  Renderer2,
+} from "@angular/core";
+import { DIRECTIONS } from "../misc/picker-directions";
+import { Subject } from "rxjs";
+import { takeUntil, debounceTime } from "rxjs/operators";
 
 @Component({
-  selector: 'emoji-picker',
-  styles: [':host { position: absolute; z-index: 9999; }'],
+  selector: "emoji-picker",
+  styles: [":host { position: absolute; z-index: 9999; }"],
   template: `
-  <emoji-content (emoji-selection)="selectionEmitter.emit($event)"></emoji-content>
+    <emoji-content
+      (emoji-selection)="selectionEmitter.emit($event)"
+    ></emoji-content>
   `,
   host: {
-    '(document:click)': 'onBackground($event)',
-    '(click)': '_lastHostMousedownEvent = $event',
-    '(window:resize)': '_windowResize.next($event)'
-  }
+    "(document:click)": "onBackground($event)",
+    "(click)": "_lastHostMousedownEvent = $event",
+    "(window:resize)": "_windowResize.next($event)",
+  },
 })
-
 export class EmojiPickerComponent {
-  @Output('emoji-select') selectionEmitter = new EventEmitter();
-  @Output('picker-close') pickerCloseEmitter = new EventEmitter(); 
+  @Output("emoji-select") selectionEmitter = new EventEmitter();
+  @Output("picker-close") pickerCloseEmitter = new EventEmitter();
 
   public _lastHostMousedownEvent;
   public _currentTarget: ElementRef;
@@ -30,20 +34,25 @@ export class EmojiPickerComponent {
   public _windowResize = new Subject<any>();
   public _destroyed = new Subject<boolean>();
 
-  constructor(private _renderer: Renderer, private _el: ElementRef) {
+  constructor(private _renderer: Renderer2, private _el: ElementRef) {
     this._windowResize
       .pipe(takeUntil(this._destroyed), debounceTime(100))
-      .subscribe(event => {
+      .subscribe((event) => {
         this.setPosition(this._currentTarget, this._currentDirection);
-      })
+      });
   }
 
-  setPosition(target: ElementRef, directionCode: DIRECTIONS = DIRECTIONS.bottom) {
+  setPosition(
+    target: ElementRef,
+    directionCode: DIRECTIONS = DIRECTIONS.bottom
+  ) {
     if (!target) {
-      return console.error('Emoji-Picker: positioning failed due to missing target element or direction code');
+      return console.error(
+        "Emoji-Picker: positioning failed due to missing target element or direction code"
+      );
     }
 
-    this._renderer.setElementStyle(this._el.nativeElement, 'transform', '');
+    this._renderer.setStyle(this._el.nativeElement, "transform", "");
 
     /** Store anchor and direction */
     this._currentTarget = target;
@@ -52,17 +61,24 @@ export class EmojiPickerComponent {
     const targetBorders = target.nativeElement.getBoundingClientRect(),
       thisBorders = this._el.nativeElement.getBoundingClientRect();
 
-    let heightCorrection = 0, widthCorrection = 0;
+    let heightCorrection = 0,
+      widthCorrection = 0;
 
     /** Setting up centering of picker for all cases */
     switch (this._currentDirection) {
       case DIRECTIONS.top:
       case DIRECTIONS.bottom:
-        widthCorrection = targetBorders.left - thisBorders.left + (targetBorders.width - thisBorders.width) / 2;
+        widthCorrection =
+          targetBorders.left -
+          thisBorders.left +
+          (targetBorders.width - thisBorders.width) / 2;
         break;
       case DIRECTIONS.left:
       case DIRECTIONS.right:
-        heightCorrection = targetBorders.top - thisBorders.top + (targetBorders.height - thisBorders.height) / 2;
+        heightCorrection =
+          targetBorders.top -
+          thisBorders.top +
+          (targetBorders.height - thisBorders.height) / 2;
         break;
     }
 
@@ -84,23 +100,29 @@ export class EmojiPickerComponent {
 
     /** Correcting positioning due to overflow problems */
     if (thisBorders.bottom + heightCorrection > window.innerHeight) {
-      heightCorrection += window.innerHeight - (thisBorders.bottom + heightCorrection);
+      heightCorrection +=
+        window.innerHeight - (thisBorders.bottom + heightCorrection);
     }
 
     if (thisBorders.top + heightCorrection < 0) {
-      heightCorrection -= (thisBorders.top + heightCorrection);
+      heightCorrection -= thisBorders.top + heightCorrection;
     }
 
     if (thisBorders.right + widthCorrection > window.innerWidth) {
-      widthCorrection += window.innerWidth - (thisBorders.right + widthCorrection);
+      widthCorrection +=
+        window.innerWidth - (thisBorders.right + widthCorrection);
     }
 
     if (thisBorders.left + widthCorrection < 0) {
-      widthCorrection -= (thisBorders.left + widthCorrection);
+      widthCorrection -= thisBorders.left + widthCorrection;
     }
-    
+
     /** set the position adjustments to the emoji picker element */
-    this._renderer.setElementStyle(this._el.nativeElement, 'transform', `translate(${widthCorrection}px,${heightCorrection}px)`);
+    this._renderer.setStyle(
+      this._el.nativeElement,
+      "transform",
+      `translate(${widthCorrection}px,${heightCorrection}px)`
+    );
   }
 
   onBackground(event) {
