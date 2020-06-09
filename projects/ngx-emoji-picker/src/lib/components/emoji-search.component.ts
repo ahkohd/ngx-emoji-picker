@@ -13,7 +13,7 @@ import { takeUntil } from 'rxjs/operators';
 
 export class EmojiSearchComponent implements OnDestroy {
   @Output('search') searchEmitter: EventEmitter<string> = new EventEmitter();
-  @ViewChild('input') input: ElementRef;
+  @ViewChild('input', { static: true }) input: ElementRef;
 
   private _searchValue: Subject<string> = new Subject();
   private _destroyed = new Subject<boolean>();

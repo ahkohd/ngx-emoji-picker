@@ -51,7 +51,7 @@ import { EmojiPickerComponent } from './components/emoji-picker.component';
   entryComponents: [EmojiPickerComponent]
 })
 export class NgxEmojiPickerModule {
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<NgxEmojiPickerModule> {
     return {
       ngModule: NgxEmojiPickerModule,
       providers: []

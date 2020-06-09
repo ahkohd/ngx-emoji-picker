@@ -16,7 +16,7 @@ import { EmojiListComponent } from './emoji-list.component';
 })
 
 export class EmojiContentComponent {
-  @ViewChild(forwardRef(() => EmojiListComponent)) emojiListComponent: EmojiListComponent;
+  @ViewChild(forwardRef(() => EmojiListComponent), { static: true }) emojiListComponent: EmojiListComponent;
   @Output('emoji-selection') emojiSelectionEmitter = new EventEmitter<any>();
 
   private _emojis = EMOJIS;
