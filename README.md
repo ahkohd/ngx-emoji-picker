@@ -16,7 +16,11 @@ This project was forked from the [ionic3-emoji-picker](https://github.com/daniel
 ## Install the module via NPM
 
 ```shell
-npm i ngx-emoji-picker --save
+# Angular 8 downwards...
+npm i ngx-emoji-picker@0.0.2
+
+#Angular 9 u
+npm i ngx-emoji-picker
 ```
 
 ## Import it in your app's module(s)
