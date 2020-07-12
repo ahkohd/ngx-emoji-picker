@@ -19,7 +19,7 @@ This project was forked from the [ionic3-emoji-picker](https://github.com/daniel
 # Angular 8 downwards...
 npm i ngx-emoji-picker@0.0.2
 
-#Angular 9 u
+#Angular 9 upwards...
 npm i ngx-emoji-picker
 ```
 
