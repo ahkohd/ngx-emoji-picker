@@ -11,7 +11,7 @@ import { takeUntil, debounceTime } from "rxjs/operators";
 
 @Component({
   selector: "emoji-picker",
-  styles: [":host { position: absolute; z-index: 9999; }"],
+  styles: [":host { position: absolute; z-index: 9999; display: none; }"],
   template: `
     <emoji-content
       (emoji-selection)="selectionEmitter.emit($event)"
@@ -34,12 +34,21 @@ export class EmojiPickerComponent {
   public _windowResize = new Subject<any>();
   public _destroyed = new Subject<boolean>();
 
-  constructor(private _renderer: Renderer2, private _el: ElementRef) {
+  constructor(private _renderer: Renderer2, private _el: ElementRef<HTMLElement>) {
     this._windowResize
       .pipe(takeUntil(this._destroyed), debounceTime(100))
       .subscribe((event) => {
         this.setPosition(this._currentTarget, this._currentDirection);
       });
+  }
+
+  hide() {
+    this._renderer.setStyle(this._el.nativeElement, "display", "none");
+  }
+
+  show() {
+    this._renderer.setStyle(this._el.nativeElement, "display", "block");
+    this.setPosition(this._currentTarget, this._currentDirection);
   }
 
   setPosition(

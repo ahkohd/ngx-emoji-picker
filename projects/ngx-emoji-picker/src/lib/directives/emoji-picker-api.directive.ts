@@ -7,7 +7,8 @@ import {
   ComponentRef,
   ElementRef,
   EventEmitter,
-  Output
+  Output,
+  OnInit
 } from '@angular/core';
 import { Subject ,  Subscription } from 'rxjs';
 import { takeUntil, distinctUntilChanged} from 'rxjs/operators';
@@ -56,20 +57,23 @@ export class EmojiPickerApiDirective {
     private _vcr: ViewContainerRef,
     private _el: ElementRef
   ) {
+    this.initPicker();
+
     this._emojiPickerOpenState
       .pipe(takeUntil(this._destroyed),
         distinctUntilChanged()
       )
       .subscribe(value => {
+       
         if (value) {
-          this.openPicker();
+          this._emojiPickerRef?.instance?.show?.();
         } else {
-          this.closePicker();
+          this._emojiPickerRef?.instance?.hide?.();
         }
       });
   }
 
-  openPicker() {
+  initPicker() {
     this._emojiPickerFactory = this._emojiPickerFactory || this._cfr.resolveComponentFactory(EmojiPickerComponent);
     this._emojiPickerRef = this._emojiPickerRef || this._vcr.createComponent(this._emojiPickerFactory);
 

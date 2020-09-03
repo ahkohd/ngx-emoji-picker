@@ -14,6 +14,7 @@ import { EmojiPickerApiDirective } from './directives/emoji-picker-api.directive
 import { EmojiPickerCaretDirective } from './directives/emoji-picker-caret.directive';
 import { EmojiEmptyCategoryPipe } from './pipes/emoji-empty-category.pipe';
 import { EmojiPickerComponent } from './components/emoji-picker.component';
+import { EmojiFallback } from './pipes/emoji-fallback.pipe';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { EmojiPickerComponent } from './components/emoji-picker.component';
     EmojiCategoriesComponent,
     EmojiCategoryComponent,
     EmojiFooterComponent,
-    EmojiEmptyCategoryPipe
+    EmojiEmptyCategoryPipe,
+    EmojiFallback
   ],
   imports: [
     CommonModule

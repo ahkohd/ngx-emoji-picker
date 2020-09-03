@@ -21,4 +21,8 @@
       background: #F1F1F1;
       border-color: #F1F1F1;
   }
+
+  ::ng-deep img {
+    width: 20px;
+  }
 }
