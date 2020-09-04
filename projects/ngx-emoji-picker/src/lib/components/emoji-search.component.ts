@@ -1,29 +1,39 @@
-import { Component, EventEmitter, Output, ViewChild, ElementRef, OnDestroy } from '@angular/core';
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
-
+import {
+  Component,
+  EventEmitter,
+  Output,
+  ViewChild,
+  ElementRef,
+  OnDestroy,
+} from "@angular/core";
+import { Subject } from "rxjs";
+import { takeUntil } from "rxjs/operators";
 
 @Component({
-  selector: 'emoji-search',
-  styleUrls: ['../styles/emoji-search.scss'],
+  selector: "emoji-search",
+  styleUrls: ["../styles/emoji-search.scss"],
   template: `
-  <input type="text" autocomplete="off" #input (input)="handleInputChange($event.target.value)" placeholder="Search"/>
-  `
+    <input
+      type="text"
+      autocomplete="off"
+      #input
+      (input)="handleInputChange($event.target.value)"
+      aria-label="Search"
+      placeholder="Search"
+    />
+  `,
 })
-
 export class EmojiSearchComponent implements OnDestroy {
-  @Output('search') searchEmitter: EventEmitter<string> = new EventEmitter();
-  @ViewChild('input', { static: true }) input: ElementRef;
+  @Output("search") searchEmitter: EventEmitter<string> = new EventEmitter();
+  @ViewChild("input", { static: true }) input: ElementRef;
 
   private _searchValue: Subject<string> = new Subject();
   private _destroyed = new Subject<boolean>();
 
   constructor() {
-    this._searchValue
-      .pipe(takeUntil(this._destroyed))
-      .subscribe(value => {
-        this.searchEmitter.emit(value);
-      });
+    this._searchValue.pipe(takeUntil(this._destroyed)).subscribe((value) => {
+      this.searchEmitter.emit(value);
+    });
   }
 
   handleInputChange(event) {
