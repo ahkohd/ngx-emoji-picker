@@ -26,5 +26,8 @@
   "peerDependencies": {
     "@angular/common": "^9.1.9",
     "@angular/core": "^9.1.9"
+  },
+  "dependencies": {
+    "twemoji": "^13.0.1"
   }
 }
