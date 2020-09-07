@@ -2,14 +2,15 @@
 
 # Ngx-Emoji-Picker
 
-This project was forked from the [ionic3-emoji-picker](https://github.com/danielehrhardt/ionic3-emoji-picker) project created by [danielehrhardt](https://github.com/danielehrhardt)
+## What's New ✨
 
-## What's New
+- 🐣 Fallback emojis using twemoji.
+- 🛠 Fixed the [AOT (Ahead Of Time) Compile error](https://github.com/danielehrhardt/ionic3-emoji-picker/issues/8) or simply put the **---prod** build compile error.
+- ⏫ Upgraded the library from a **Ng2** project to a **Ng9** project.
+- ⏫ Upgraded the library **RxJs** from **v5** to **v6** to make it support new angular versions.
+- ✅ Now compatible with **Ng2** - **Ng9+** projects and as well as **Ionic 3/4**.
 
-- Fixed the [AOT (Ahead Of Time) Compile error](https://github.com/danielehrhardt/ionic3-emoji-picker/issues/8) or simply put the **---prod** build compile error.
-- Upgraded the library from a **Ng2** project to a **Ng9** project.
-- Upgraded the library **RxJs** from **v5** to **v6** to make it support new angular versions.
-- Now compatible with **Ng2** - **Ng9** projects and as well as **Ionic 3/4**.
+_A fork of [ionic3-emoji-picker](https://github.com/danielehrhardt/ionic3-emoji-picker) project created by [danielehrhardt](https://github.com/danielehrhardt)_
 
 # Installation
 
@@ -139,7 +140,7 @@ $event = CaretEvent{ caretOffset: 13, caretRange: Range{...}, textContent: 'cont
 
 Emoji Picker will get placed relative the element chosen via the directive api, centered and within window borders
 
-# NgxEmojiPicker
+# Contributing
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
 
