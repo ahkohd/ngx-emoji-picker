@@ -18,7 +18,7 @@
 
 _A fork of [ionic3-emoji-picker](https://github.com/danielehrhardt/ionic3-emoji-picker) project created by [danielehrhardt](https://github.com/danielehrhardt)_
 
-# Installation
+# ⬇️ Installation
 
 ## Install the module via NPM
 
@@ -66,7 +66,7 @@ import  {  NgxEmojiPickerModule  }  from  'ngx-emoji-picker';
 export class SharedModule {}
 ```
 
-## Sample
+## 🛠 Sample
 
 ### Angular Example
 
@@ -146,7 +146,7 @@ $event = CaretEvent{ caretOffset: 13, caretRange: Range{...}, textContent: 'cont
 
 Emoji Picker will get placed relative the element chosen via the directive api, centered and within window borders
 
-# Contributing
+# 👷‍♀️👷‍♂️ Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md)
 
