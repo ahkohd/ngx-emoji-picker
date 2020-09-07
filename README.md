@@ -1,9 +1,12 @@
 [![npm version](https://badge.fury.io/js/ngx-emoji-picker.svg)](https://badge.fury.io/js/ngx-emoji-picker)
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# Ngx-Emoji-Picker
+# 😎 Ngx-emoji-picker
 
 ## What's New ✨
 
@@ -188,6 +191,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
