@@ -27,7 +27,7 @@ _A fork of [ionic3-emoji-picker](https://github.com/danielehrhardt/ionic3-emoji-
 npm i ngx-emoji-picker@0.0.2
 
 # Angular 9 upwards...
-npm i ngx-emoji-picker
+npm i ngx-emoji-picker twemoji
 ```
 
 ## Import it in your app's module(s)
