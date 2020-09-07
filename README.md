@@ -8,7 +8,7 @@
 
 # 😎 Ngx-emoji-picker
 
-## What's New ✨
+## What's New 🆕
 
 - 🐣 Fallback emojis using twemoji.
 - 🛠 Fixed the [AOT (Ahead Of Time) Compile error](https://github.com/danielehrhardt/ionic3-emoji-picker/issues/8) or simply put the **---prod** build compile error.
