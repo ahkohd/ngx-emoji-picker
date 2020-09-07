@@ -23,6 +23,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "cheygo",
+      "name": "cheygo",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/69327675?v=4",
+      "profile": "https://github.com/cheygo",
+      "contributions": [
+        "a11y"
+      ]
     }
   ],
   "contributorsPerLine": 7,
