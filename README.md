@@ -1,6 +1,6 @@
 [![npm version](https://badge.fury.io/js/ngx-emoji-picker.svg)](https://badge.fury.io/js/ngx-emoji-picker)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Ngx-Emoji-Picker
@@ -182,6 +182,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://victor-aremu.web.app"><img src="https://avatars1.githubusercontent.com/u/13041443?v=4" width="100px;" alt=""/><br /><sub><b>Victor Aremu</b></sub></a><br /><a href="#maintenance-ahkohd" title="Maintenance">🚧</a> <a href="#projectManagement-ahkohd" title="Project Management">📆</a></td>
     <td align="center"><a href="https://github.com/GNURub"><img src="https://avatars3.githubusercontent.com/u/1318648?v=4" width="100px;" alt=""/><br /><sub><b>Rubén</b></sub></a><br /><a href="https://github.com/ahkohd/ngx-emoji-picker/commits?author=GNURub" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/cheygo"><img src="https://avatars3.githubusercontent.com/u/69327675?v=4" width="100px;" alt=""/><br /><sub><b>cheygo</b></sub></a><br /><a href="#a11y-cheygo" title="Accessibility">️️️️♿️</a></td>
   </tr>
 </table>
 
