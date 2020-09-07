@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "ahkohd",
+      "name": "Victor Aremu",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/13041443?v=4",
+      "profile": "https://victor-aremu.web.app",
+      "contributions": [
+        "maintenance",
+        "projectManagement"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "ngx-emoji-picker",
+  "projectOwner": "ahkohd",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
