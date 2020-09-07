@@ -146,6 +146,10 @@ $event = CaretEvent{ caretOffset: 13, caretRange: Range{...}, textContent: 'cont
 
 Emoji Picker will get placed relative the element chosen via the directive api, centered and within window borders
 
+# Related
+
+- [ngx-emoj](https://github.com/ahkohd/ngx-emoj) - 💅 A simple, theme-able emoji mart/picker for angular 4+
+
 # Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md)
