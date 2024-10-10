@@ -24,8 +24,8 @@
   "homepage": "https://github.com/ahkohd/ngx-emoji-picker",
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^9.1.9",
-    "@angular/core": "^9.1.9",
+    "@angular/common": "^9.1.9 || ^18.0.0",
+    "@angular/core": "^9.1.9 || ^18.0.0",
     "twemoji": "^13.0.1"
   },
   "whitelistedNonPeerDependencies": [
